@@ -1,0 +1,42 @@
+	<br /><br /><br />
+<ol>
+<li> Genre 1: Sports</li>
+	<ul>
+	<br />
+		<% if Leaderboard.find_by_user_id(current_user.id).checkc == true %>
+		<li><%= link_to "Cricket Quiz", '/crickets/', class: "btn btn-success" %></li>
+			<span style="color:green; font-size: 15px">(Attempted)</span>
+		<% else %>
+		<li><%= link_to "Cricket Quiz", '/crickets/', class: "btn btn-danger" %></li>
+			<span style="color:red; font-size: 15px">(Not Attempted)</span>
+		<% end %>
+		<% if Leaderboard.find_by_user_id(current_user.id).checkf == true %>
+		<br /><br />
+		<li><%= link_to "Football Quiz", '/footballs/',  class: "btn btn-success" %></li>
+			<span style="color:green; font-size: 15px">(Attempted)</span>
+		<% else %>
+		<li><%= link_to "Football Quiz", '/footballs/',  class: "btn btn-danger" %></li>
+			<span style="color:red; font-size: 15px">(Not Attempted)</span>
+		<% end %>
+	</ul>
+	<br /><br /><br /><br /><br />
+<li> Genre 2: Movies</li>
+	<ul>
+	<br />
+		<% if Leaderboard.find_by_user_id(current_user.id).checkh == true %>
+		<li><%= link_to "Hollywood Quiz", '/hollywoods/', class: "btn btn-success"  %></li>
+			<span style="color:green; font-size: 15px">(Attempted)</span>
+		<% else %>
+		<li><%= link_to "Hollywood Quiz", '/hollywoods/', class: "btn btn-danger"  %></li>
+			<span style="color:red; font-size: 15px">(Not Attempted)</span>
+		<% end %>
+		<br /><br />
+		<% if Leaderboard.find_by_user_id(current_user.id).checkb == true %>
+		<li><%= link_to "Bollywood Quiz", '/bollywoods/',  class: "btn btn-success" %></li>
+			<span style="color:green; font-size: 15px">(Attempted)</span>
+		<% else %>
+		<li><%= link_to "Bollywood Quiz", '/bollywoods/',  class: "btn btn-danger" %></li>
+			<span style="color:red; font-size: 15px">(Not Attempted)</span>
+		<% end %>
+	</ul>
+</ol>

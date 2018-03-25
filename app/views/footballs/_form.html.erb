@@ -1,0 +1,47 @@
+<%= form_with(model: football, local: true) do |form| %>
+  <% if football.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(football.errors.count, "error") %> prohibited this football from being saved:</h2>
+
+      <ul>
+      <% football.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :question %>
+    <%= form.text_field :question, id: :football_question %>
+  </div>
+
+  <div class="field">
+    <%= form.label :opta %>
+    <%= form.text_field :opta, id: :football_opta %>
+  </div>
+
+  <div class="field">
+    <%= form.label :optb %>
+    <%= form.text_field :optb, id: :football_optb %>
+  </div>
+
+  <div class="field">
+    <%= form.label :optc %>
+    <%= form.text_field :optc, id: :football_optc %>
+  </div>
+
+  <div class="field">
+    <%= form.label :optd %>
+    <%= form.text_field :optd, id: :football_optd %>
+  </div>
+
+  <div class="field">
+    <%= form.label :correctans %>
+    <%= form.text_field :correctans, id: :football_correctans %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

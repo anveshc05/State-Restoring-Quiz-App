@@ -1,0 +1,28 @@
+
+<p>
+  <strong>User:</strong>
+  <%= @leaderboard.user %>
+</p>
+
+<p>
+  <strong>Cricketscore:</strong>
+  <%= @leaderboard.cricketscore %>
+</p>
+
+<p>
+  <strong>Footballscore:</strong>
+  <%= @leaderboard.footballscore %>
+</p>
+
+<p>
+  <strong>Bollywoodscore:</strong>
+  <%= @leaderboard.bollywoodscore %>
+</p>
+
+<p>
+  <strong>Hollywoodscore:</strong>
+  <%= @leaderboard.hollywoodscore %>
+</p>
+
+<%= link_to 'Edit', edit_leaderboard_path(@leaderboard) %> |
+<%= link_to 'Back', leaderboards_path %>

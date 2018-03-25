@@ -1,0 +1,15 @@
+<h4> Your current score in 'cricket quiz' is <=% @lbord.cricketscore %></h4>
+
+<table>
+<thead> 
+<tr><th>Email</th>
+<th> Score(max) </th></tr></thead>
+<tbody>
+<% @crikets.each do |criket| %>
+	<tr>
+	<td><%= User.find(criket.user_id).email %></td>
+	<td>@cricket.maxcricscore</td>
+	</tr>
+<%= end %>
+</tbody>
+</table>

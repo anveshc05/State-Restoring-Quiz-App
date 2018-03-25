@@ -1,0 +1,23 @@
+<%= link_to "Start the quiz!!!", '/footballs/1',  class: "btn btn-info" %>
+<% if @lbord.footballques > 0 %>
+  <% if @lbord.footballques != Football.count %>
+    <%= link_to "resume", '/footballs/' + (@lbord.footballques).to_s,  class: "btn btn-info" %>
+  <% end %>
+<% end %>
+
+<h4 style="text-align:center; color:red"> Your current score in 'football quiz' is <%= @lbord.footballscore %></h4>
+<div class="container">
+<table class="table table-striped table-bordered">
+<thead> 
+<tr><th>Email</th>
+<th> Score(max) </th></tr></thead>
+<tbody>
+<% @fooballs.each do |fooball| %>
+  <tr>
+  <td><%= User.find(fooball.user_id).email %></td>
+  <td><%= fooball.maxfootscore %></td>
+  </tr>
+<% end %>
+</tbody>
+</table>
+</div>

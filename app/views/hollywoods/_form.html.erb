@@ -1,0 +1,47 @@
+<%= form_with(model: hollywood, local: true) do |form| %>
+  <% if hollywood.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(hollywood.errors.count, "error") %> prohibited this hollywood from being saved:</h2>
+
+      <ul>
+      <% hollywood.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :question %>
+    <%= form.text_field :question, id: :hollywood_question %>
+  </div>
+
+  <div class="field">
+    <%= form.label :opta %>
+    <%= form.text_field :opta, id: :hollywood_opta %>
+  </div>
+
+  <div class="field">
+    <%= form.label :optb %>
+    <%= form.text_field :optb, id: :hollywood_optb %>
+  </div>
+
+  <div class="field">
+    <%= form.label :optc %>
+    <%= form.text_field :optc, id: :hollywood_optc %>
+  </div>
+
+  <div class="field">
+    <%= form.label :optd %>
+    <%= form.text_field :optd, id: :hollywood_optd %>
+  </div>
+
+  <div class="field">
+    <%= form.label :correctans %>
+    <%= form.text_field :correctans, id: :hollywood_correctans %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

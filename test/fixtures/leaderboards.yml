@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  cricketscore: 1
+  footballscore: 1
+  bollywoodscore: 1
+  hollywoodscore: 1
+
+two:
+  user: two
+  cricketscore: 1
+  footballscore: 1
+  bollywoodscore: 1
+  hollywoodscore: 1

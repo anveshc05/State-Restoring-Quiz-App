@@ -1,0 +1,33 @@
+<h4 style="text-align:center; color:red"> Your current score in 'Sports quiz' is <%= @lbord.footballscore+@lbord.cricketscore %></h4>
+<div class="container">
+<table class="table table-striped table-bordered">
+<thead> 
+<tr><th>Email</th>
+<th> Score(max) </th></tr></thead>
+<tbody>
+<% @sports.each do |sport| %>
+  <tr>
+  <td><%= User.find(sport.user_id).email %></td>
+  <td><%= sport.maxfootscore+sport.maxcricscore %></td>
+  </tr>
+<% end %>
+</tbody>
+</table>
+</div>
+
+<h4 style="text-align:center; color:red"> Your current score in 'Movies quiz' is <%= @lbord.hollywoodscore+@lbord.bollywoodscore %></h4>
+<div class="container">
+<table class="table table-striped table-bordered">
+<thead> 
+<tr><th>Email</th>
+<th> Score(max) </th></tr></thead>
+<tbody>
+<% @movies.each do |movie| %>
+  <tr>
+  <td><%= User.find(movie.user_id).email %></td>
+  <td><%= movie.maxhollyscore+movie.maxbollyscore %></td>
+  </tr>
+<% end %>
+</tbody>
+</table>
+</div>

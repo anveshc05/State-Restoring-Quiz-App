@@ -1,0 +1,22 @@
+<%= link_to "Start the quiz!!!", '/bollywoods/1', class: "btn btn-info"%>
+<% if @lbord.bollywoodques > 0 %>
+  <% if @lbord.bollywoodques != Bollywood.count %>
+    <%= link_to "resume", '/bollywoods/' + (@lbord.bollywoodques).to_s , class: "btn btn-info" %>
+  <% end %>
+<% end %>
+  <h4 style="text-align:center; color:red"> Your current score in 'bollywood quiz' is <%= @lbord.bollywoodscore %></h4>
+<div class = "container">
+<table class = "table table-striped table bordered">
+<thead> 
+<tr><th>Email</th>
+<th> Score(max) </th></tr></thead>
+<tbody>
+<% @bolywoods.each do |bolywood| %>
+  <tr>
+  <td><%= User.find(bolywood.user_id).email %></td>
+  <td><%= bolywood.maxbollyscore %></td>
+  </tr>
+<% end %>
+</tbody>
+</table>
+</div>s

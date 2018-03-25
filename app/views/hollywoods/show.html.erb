@@ -1,0 +1,66 @@
+
+<form method="GET" action= "#">
+  <div class="container">
+  <div class="question">
+  <span class="label label-warning"><%= @hollywood.id %></span>
+     <span class="question">
+    <strong>Question:</strong>
+    <%= @hollywood.question %>
+  </span>
+  </div>
+  <ol type="a">
+  <% if @hollywood.multicheck %>
+    <span style="color:red">Multi correct question </span><br />
+    <li>
+    <div style="padding: 2em; border: 1px solid">
+    <%= check_box_tag(:A) %>
+    <%= label_tag(:A, @hollywood.opta) %>
+    </div>
+      </li>
+      <li>
+          <div style="padding: 2em; border: 1px solid">
+    <%= check_box_tag(:B) %>
+    <%= label_tag(:B, @hollywood.optb) %>
+    </div>
+      </li>
+      <li>
+          <div style="padding: 2em; border: 1px solid">
+      <%= check_box_tag(:C) %><%= label_tag(:C, @hollywood.optc) %>
+      </li>
+      <li>
+          <div style="padding: 2em; border: 1px solid">
+      <%= check_box_tag(:D) %><%= label_tag(:D, @hollywood.optd) %>
+      </li>
+    </ol>
+  <% else %>
+      <span style="color:red">Single Correct type question</span><br />
+    <li>
+      <!-- <div class="choice"> -->
+      <div style="padding: 2em; border: 1px solid">
+      <input type="radio" name="m" value="A"><%= @hollywood.opta %></input> 
+      </div>
+    </li>
+    <li>
+      <div style="padding: 2em; border: 1px solid">
+      <input type="radio" name="m" value="B"><%= @hollywood.optb %></input> 
+      </div>
+    </li>
+    <li>
+      <div style="padding: 2em; border: 1px solid">
+      <input type="radio" name="m" value="C"><%= @hollywood.optc %></input> 
+      </div>
+    </li>
+    <li>
+      <div style="padding: 2em; border: 1px solid">
+      <input type="radio" name="m" value="D"><%= @hollywood.optd %></input> 
+      </div>
+    </li>
+  <% end %>
+  <div class="container" style="text-align: center">
+  <div class="btn btn-success">
+  <input type="submit">
+  </div>
+  </div>
+
+  <h3 style="text-align:center; color:red"> Current score: <%= @lbord.hollywoodscore %></p>
+</form>

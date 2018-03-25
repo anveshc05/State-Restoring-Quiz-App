@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  question: MyString
+  opta: MyString
+  optb: MyString
+  optc: MyString
+  optd: MyString
+  correctans: MyString
+
+two:
+  question: MyString
+  opta: MyString
+  optb: MyString
+  optc: MyString
+  optd: MyString
+  correctans: MyString
